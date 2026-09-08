@@ -170,8 +170,76 @@ namespace DVLD.DataAccess
             }
             return false;
         }
+        public static int? AddNewPerson(string FirstName, string SecondName,
+           string ThirdName, string LastName, string NationalNo, DateTime DateOfBirth,
+           short Gender, string Address, string Phone, string Email,
+            int NationalityCountryID, string ImagePath)
+        {
+            //this function will return the new person id if succeeded and null if not.
+            int? PersonID = null;
 
+            using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+            {
+                string query = @"INSERT INTO People (FirstName, SecondName, ThirdName,LastName,NationalNo,
+                                                       DateOfBirth,Gender,Address,Phone, Email, NationalityCountryID,ImagePath)
+                                 VALUES (@FirstName, @SecondName,@ThirdName, @LastName, @NationalNo,
+                                         @DateOfBirth,@Gender,@Address,@Phone, @Email,@NationalityCountryID,@ImagePath);
+                             SELECT SCOPE_IDENTITY();";
 
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+
+                    command.Parameters.Add("@FirstName", SqlDbType.NVarChar,20).Value = FirstName;
+                    command.Parameters.Add("@SecondName", SqlDbType.NVarChar, 20).Value = SecondName;
+
+                    if (ThirdName != "" && ThirdName != null)
+                        command.Parameters.Add("@ThirdName", SqlDbType.NVarChar, 20).Value = ThirdName;
+                    else
+                        command.Parameters.Add("@ThirdName", SqlDbType.NVarChar, 20).Value = System.DBNull.Value;
+
+                    command.Parameters.Add("@LastName", SqlDbType.NVarChar, 20).Value = LastName;
+                    command.Parameters.Add("@NationalNo", SqlDbType.NVarChar, 20).Value = NationalNo;
+                    command.Parameters.Add("@DateOfBirth", SqlDbType.DateTime).Value = DateOfBirth;
+                    command.Parameters.Add("@Gender", SqlDbType.TinyInt).Value = Gender;
+                    command.Parameters.Add("@Address", SqlDbType.NVarChar, 500).Value = Address;
+                    command.Parameters.Add("@Phone", SqlDbType.NVarChar, 20).Value = Phone;
+
+                    if (Email != "" && Email != null)
+                        command.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = Email;
+                    else
+                        command.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = System.DBNull.Value;
+
+                    command.Parameters.Add("@NationalityCountryID", SqlDbType.Int).Value = NationalityCountryID;
+
+                    if (ImagePath != "" && ImagePath != null)
+                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar, 250).Value = ImagePath;
+                    else
+                        command.Parameters.Add("@ImagePath", SqlDbType.NVarChar, 250).Value = System.DBNull.Value;
+
+                    try
+                    {
+                        connection.Open();
+
+                        object result = command.ExecuteScalar();
+
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            PersonID = insertedID;
+                        }
+                    }
+
+                    catch (Exception ex)
+                    {
+                        Logger.LogError($"Error: {ex}");
+
+                    }
+
+                }
+            }
+            return PersonID;
+        }
+
+        
 
     }
 }
