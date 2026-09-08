@@ -11,7 +11,7 @@ namespace DVLD.DataAccess
     public class Person
     {
        public static bool GetPersonInfoByID(int PersonID, ref string FirstName,ref string SecondName,ref string ThirdName, ref string LastName,
-           ref string NationalNo, ref DateTime DateOfBirth, ref int Gender, ref string Address, ref string Phone,ref string Email,
+           ref string NationalNo, ref DateTime DateOfBirth, ref short Gender, ref string Address, ref string Phone,ref string Email,
            ref int NationalityCountryID,ref string ImagePath)
         {
             using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
@@ -170,13 +170,13 @@ namespace DVLD.DataAccess
             }
             return false;
         }
-        public static int? AddNewPerson(string FirstName, string SecondName,
+        public static int AddNewPerson(string FirstName, string SecondName,
            string ThirdName, string LastName, string NationalNo, DateTime DateOfBirth,
            short Gender, string Address, string Phone, string Email,
             int NationalityCountryID, string ImagePath)
         {
             //this function will return the new person id if succeeded and null if not.
-            int? PersonID = null;
+            int PersonID = -1;
 
             using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
             {
