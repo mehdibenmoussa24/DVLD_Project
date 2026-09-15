@@ -37,6 +37,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblNationalNo = new System.Windows.Forms.Label();
             this.lbl13 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblGender = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblPersonID = new System.Windows.Forms.Label();
-            this.lblNationalNo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -171,6 +171,17 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(254, 31);
             this.panel6.TabIndex = 6;
+            // 
+            // lblNationalNo
+            // 
+            this.lblNationalNo.BackColor = System.Drawing.Color.Transparent;
+            this.lblNationalNo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNationalNo.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNationalNo.Location = new System.Drawing.Point(3, 1);
+            this.lblNationalNo.Name = "lblNationalNo";
+            this.lblNationalNo.Size = new System.Drawing.Size(251, 28);
+            this.lblNationalNo.TabIndex = 13;
+            this.lblNationalNo.Text = "?????";
             // 
             // lbl13
             // 
@@ -418,6 +429,7 @@
             this.btnEditPersonInfo.TabIndex = 20;
             this.btnEditPersonInfo.Text = "Edit Person Info";
             this.btnEditPersonInfo.UseVisualStyleBackColor = false;
+            this.btnEditPersonInfo.Click += new System.EventHandler(this.btnEditPersonInfo_Click);
             // 
             // pictureBox9
             // 
@@ -493,7 +505,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pictureBox4.Image = global::DVLD.Properties.Resources.Name;
+            this.pictureBox4.Image = typeof(DVLD.Properties.Resources).Name;
             this.pictureBox4.Location = new System.Drawing.Point(54, 113);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(33, 28);
@@ -564,17 +576,6 @@
             this.lblPersonID.TabIndex = 9;
             this.lblPersonID.Text = "?????";
             this.lblPersonID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNationalNo
-            // 
-            this.lblNationalNo.BackColor = System.Drawing.Color.Transparent;
-            this.lblNationalNo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNationalNo.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNationalNo.Location = new System.Drawing.Point(3, 1);
-            this.lblNationalNo.Name = "lblNationalNo";
-            this.lblNationalNo.Size = new System.Drawing.Size(251, 28);
-            this.lblNationalNo.TabIndex = 13;
-            this.lblNationalNo.Text = "?????";
             // 
             // ctrlPersonCard
             // 

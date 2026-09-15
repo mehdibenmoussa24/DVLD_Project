@@ -67,7 +67,7 @@ namespace DVLD
             if (_Person == null)
             {
                 ResetPersonInfo();
-                MessageBox.Show("No Person with National No. = " + PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No Person with Person ID. = " + PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
            
@@ -87,8 +87,10 @@ namespace DVLD
             }
                 _FillPersonInfo();
         }
-       
 
-        
+        private void btnEditPersonInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
