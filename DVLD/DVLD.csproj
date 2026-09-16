@@ -51,10 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ctrlPersonCard.cs">
+    <Compile Include="ctrlPersonCardWithFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlPersonCard.Designer.cs">
+    <Compile Include="ctrlPersonCardWithFilter.Designer.cs">
+      <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People_folder\Controls\ctrlPersonCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People_folder\Controls\ctrlPersonCard.Designer.cs">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -72,7 +78,7 @@
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ctrlPersonCard.resx">
+    <EmbeddedResource Include="People_folder\Controls\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -170,5 +176,6 @@
   <ItemGroup>
     <None Include="Resources\name-tag.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
