@@ -49,7 +49,7 @@ namespace DVLD.DataAccess
                             LastName = (string)reader["LastName"];
                             NationalNo = (string)reader["NationalNo"];
                             DateOfBirth = (DateTime)reader["DateOfBirth"];
-                            Gender = (byte)reader["Gendor"];
+                            Gender = (byte)reader["Gender"];
                             Address = (string)reader["Address"];
                             Phone = (string)reader["Phone"];
 

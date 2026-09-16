@@ -42,7 +42,7 @@ namespace DVLD
             lblAddress.Text = _Person.Address.ToString();
             lblDateOfBirth.Text = _Person.DateOfBirth.ToString();
             lblPhone.Text = _Person.Phone.ToString();
-            lblCountry.Text = "Soon";
+            lblCountry.Text = Country.Find(_Person.NationalityCountryID).CountryName;
             _LoadPersonImage();
         }
 
@@ -90,7 +90,7 @@ namespace DVLD
 
         private void btnEditPersonInfo_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Comming Soon ;-)", "Soon.", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
