@@ -9,6 +9,19 @@ namespace DVLD
     public partial class ctrlPersonCard : UserControl
     {
         private Person _Person;
+
+        private int _PersonID = -1;
+
+        public int PersonID
+        {
+            get { return _PersonID; }
+        }
+
+        public Person SelectedPersonInfo
+        {
+            get { return _Person; }
+        }
+
      
         public ctrlPersonCard()
         {

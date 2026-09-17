@@ -32,8 +32,6 @@ namespace DVLD
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlPersonCard));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
@@ -77,7 +75,8 @@ namespace DVLD
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbPersonalPicture = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -98,26 +97,8 @@ namespace DVLD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalPicture)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(32, 85);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1364, 4);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.ForeColor = System.Drawing.Color.Transparent;
-            this.panel2.Location = new System.Drawing.Point(0, -8);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1353, 10);
-            this.panel2.TabIndex = 3;
             // 
             // label1
             // 
@@ -579,6 +560,25 @@ namespace DVLD
             this.pbPersonalPicture.TabIndex = 0;
             this.pbPersonalPicture.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.ForeColor = System.Drawing.Color.Transparent;
+            this.panel2.Location = new System.Drawing.Point(0, -8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1353, 10);
+            this.panel2.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Menu;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.ForeColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(32, 85);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1364, 4);
+            this.panel1.TabIndex = 2;
+            // 
             // ctrlPersonCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -620,7 +620,6 @@ namespace DVLD
             this.Controls.Add(this.panel5);
             this.Name = "ctrlPersonCard";
             this.Size = new System.Drawing.Size(1427, 408);
-            this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -641,6 +640,7 @@ namespace DVLD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonalPicture)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -650,9 +650,7 @@ namespace DVLD
 
         private System.Windows.Forms.PictureBox pbPersonalPicture;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblName;
@@ -693,5 +691,7 @@ namespace DVLD
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblPersonID;
         private System.Windows.Forms.Label lblNationalNo;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
