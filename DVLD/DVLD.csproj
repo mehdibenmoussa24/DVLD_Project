@@ -51,17 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmShowPersonInfo.cs">
+    <Compile Include="People_folder\frmShowPersonInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShowPersonInfo.Designer.cs">
+    <Compile Include="People_folder\frmShowPersonInfo.Designer.cs">
       <DependentUpon>frmShowPersonInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="People_folder\frmFIndPerson.cs">
+    <Compile Include="People_folder\frmFindPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="People_folder\frmFIndPerson.Designer.cs">
-      <DependentUpon>frmFIndPerson.cs</DependentUpon>
+    <Compile Include="People_folder\frmFindPerson.Designer.cs">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="People_folder\Controls\ctrlPersonCardWithFilter.cs">
       <SubType>UserControl</SubType>
@@ -90,7 +90,7 @@
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmShowPersonInfo.resx">
+    <EmbeddedResource Include="People_folder\frmShowPersonInfo.resx">
       <DependentUpon>frmShowPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People_folder\Controls\ctrlPersonCardWithFilter.resx">
@@ -105,8 +105,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="People_folder\frmFIndPerson.resx">
-      <DependentUpon>frmFIndPerson.cs</DependentUpon>
+    <EmbeddedResource Include="People_folder\frmFindPerson.resx">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
