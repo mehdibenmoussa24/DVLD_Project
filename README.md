@@ -54,6 +54,20 @@ The initial People Management module has been implemented.
 - DataGridView with filtering functionality.
 - Initial Add and Close button functionality.
 
+### Person Management Improvements
+
+- Added `frmAddUpdatePerson` for adding and updating person information.
+- Standardized control names for better clarity and maintainability.
+- Added validation for required fields, email, and national number.
+- Added gender-based default images and image handling.
+- Improved form initialization and Add/Update mode handling.
+- Added placeholders, focus events, and error feedback.
+- Renamed the `Country` property to `CountryInfo`.
+- Added `Util.cs` with reusable utility methods for GUIDs, folders, file names, and image handling.
+- Added validation and utility classes.
+- Updated project files and resources.
+- Removed obsolete controls and event handlers.
+
 ## UI & Resources
 
 - Added reusable UserControls for person-related functionality.
