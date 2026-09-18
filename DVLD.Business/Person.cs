@@ -31,7 +31,7 @@ namespace DVLD.Business
         public string Email { get; set; }
         public int NationalityCountryID { get; set; }
 
-        public Country Country { get; set; }
+        public Country CountryInfo { get; set; }
 
         private string _ImagePath;
         public string ImagePath
