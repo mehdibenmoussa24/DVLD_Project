@@ -67,11 +67,11 @@
             // 
             this.Close.BackColor = System.Drawing.Color.Gainsboro;
             this.Close.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Image = global::DVLD.Properties.Resources.CLose;
+            this.Close.Image = global::DVLD.Properties.Resources.stop;
             this.Close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Close.Location = new System.Drawing.Point(1253, 625);
+            this.Close.Location = new System.Drawing.Point(1240, 625);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(154, 51);
+            this.Close.Size = new System.Drawing.Size(167, 51);
             this.Close.TabIndex = 2;
             this.Close.Text = "Close";
             this.Close.UseVisualStyleBackColor = false;
