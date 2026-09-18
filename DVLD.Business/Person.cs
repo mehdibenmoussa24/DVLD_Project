@@ -54,7 +54,7 @@ namespace DVLD.Business
             this.Phone = string.Empty;
             this.Email = string.Empty;
             this.NationalityCountryID = 0;
-            this.Country = new Country();
+            this.CountryInfo = new Country();
             this._ImagePath = string.Empty;
 
             _Mode = enMode.AddNew;
@@ -74,7 +74,7 @@ namespace DVLD.Business
             this.Phone = phone;
             this.Email = email;
             this.NationalityCountryID = nationalityCountryID;
-            this.Country = Country.Find(nationalityCountryID);
+            this.CountryInfo = Country.Find(nationalityCountryID);
             this._ImagePath = imagePath;
 
             _Mode = enMode.Update;

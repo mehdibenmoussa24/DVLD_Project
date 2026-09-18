@@ -102,6 +102,8 @@
     <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Global Classes\Util.cs" />
+    <Compile Include="Global Classes\Validation.cs" />
     <EmbeddedResource Include="frmListPeople.resx">
       <DependentUpon>frmListPeople.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,5 +247,6 @@
   <ItemGroup>
     <None Include="Resources\Save-icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

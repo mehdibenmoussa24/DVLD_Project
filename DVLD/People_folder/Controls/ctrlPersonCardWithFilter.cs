@@ -56,8 +56,7 @@ namespace DVLD
             InitializeComponent();
         }
 
-        private int _PersonID;
-
+ 
         public int PersonID
         {
             get { return ctrlPersonCard1.PersonID; } 
