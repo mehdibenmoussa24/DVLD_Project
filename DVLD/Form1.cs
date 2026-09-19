@@ -16,5 +16,11 @@ namespace DVLD
         {
             InitializeComponent();
         }
+
+        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmListPeople();
+            frm.ShowDialog();
+        }
     }
 }

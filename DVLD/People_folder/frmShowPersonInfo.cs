@@ -12,11 +12,19 @@ namespace DVLD
 {
     public partial class frmShowPersonInfo : Form
     {
-        public frmShowPersonInfo()
+
+        public frmShowPersonInfo(int personID)
         {
             InitializeComponent();
+            ctrlPersonCard1.LoadPersonData(personID);
         }
 
+        public frmShowPersonInfo(string NationalNo)
+        {
+            InitializeComponent();
+            ctrlPersonCard1.LoadPersonData(NationalNo);
+        }
+ 
         private void Close_Click(object sender, EventArgs e)
         {
             this.Close();
