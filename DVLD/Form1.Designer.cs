@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.applicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.peopleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.applicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.peopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,12 +45,29 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(35, 35);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.applicationsToolStripMenuItem,
-            this.peopToolStripMenuItem});
+            this.peopleToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1556, 54);
+            this.menuStrip1.Size = new System.Drawing.Size(1556, 53);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // applicationsToolStripMenuItem
+            // 
+            this.applicationsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.applicationsToolStripMenuItem.Image = global::DVLD.Properties.Resources.Applications;
+            this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
+            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(261, 49);
+            this.applicationsToolStripMenuItem.Text = "Applications";
+            // 
+            // peopleToolStripMenuItem
+            // 
+            this.peopleToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.peopleToolStripMenuItem.Image = global::DVLD.Properties.Resources.People;
+            this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
+            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(173, 49);
+            this.peopleToolStripMenuItem.Text = "People";
+            this.peopleToolStripMenuItem.Click += new System.EventHandler(this.peopleToolStripMenuItem_Click);
             // 
             // pictureBox2
             // 
@@ -67,28 +84,12 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::DVLD.Properties.Resources.Background2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1556, 618);
+            this.pictureBox1.Size = new System.Drawing.Size(1556, 619);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // applicationsToolStripMenuItem
-            // 
-            this.applicationsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.applicationsToolStripMenuItem.Image = global::DVLD.Properties.Resources.Applications;
-            this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
-            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(269, 50);
-            this.applicationsToolStripMenuItem.Text = "Applications";
-            // 
-            // peopToolStripMenuItem
-            // 
-            this.peopToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.peopToolStripMenuItem.Image = global::DVLD.Properties.Resources.People;
-            this.peopToolStripMenuItem.Name = "peopToolStripMenuItem";
-            this.peopToolStripMenuItem.Size = new System.Drawing.Size(177, 50);
-            this.peopToolStripMenuItem.Text = "People";
             // 
             // Form1
             // 
@@ -116,7 +117,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem applicationsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem peopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem peopleToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

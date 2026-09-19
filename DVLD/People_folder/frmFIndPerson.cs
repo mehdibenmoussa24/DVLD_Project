@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace DVLD
 {
-    public partial class Form1 : Form
+    public partial class frmFindPerson : Form
     {
-        public Form1()
+        public frmFindPerson()
         {
             InitializeComponent();
         }
 
-        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
-            Form frm = new frmListPeople();
-            frm.ShowDialog();
+            this.Close();
         }
     }
 }

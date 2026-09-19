@@ -9,6 +9,19 @@ namespace DVLD
     public partial class ctrlPersonCard : UserControl
     {
         private Person _Person;
+
+        private int _PersonID = -1;
+
+        public int PersonID
+        {
+            get { return _PersonID; }
+        }
+
+        public Person SelectedPersonInfo
+        {
+            get { return _Person; }
+        }
+
      
         public ctrlPersonCard()
         {
@@ -90,7 +103,8 @@ namespace DVLD
 
         private void btnEditPersonInfo_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Comming Soon ;-)", "Soon.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Form frm = new frmAddUpdatePerson(_Person.PersonID);
+            frm.ShowDialog();
         }
     }
 }
