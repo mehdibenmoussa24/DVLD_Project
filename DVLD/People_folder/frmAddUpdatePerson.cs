@@ -57,7 +57,7 @@ namespace DVLD
             }
         }
 
-        private void _ResetDefualtValues()
+        private void _ResetDefaultValues()
         {
             //this will initialize the reset the defaule values
             _FillCountriesInComboBox();
@@ -120,7 +120,7 @@ namespace DVLD
             txtThirdName.Text = _Person.ThirdName?.ToString();
             txtLastName.Text = _Person.LastName.ToString();
             txtNationalNo.Text = _Person.NationalNo.ToString();
-            if (_Person.Gender == 0)
+            if (_Person.Gender == (short)enGender.Male)
                 rbMale.Checked = true;
             else
                 rbFemale.Checked = true;
@@ -143,7 +143,7 @@ namespace DVLD
 
         private void frmAddUpdatePerson_Load(object sender, EventArgs e)
         {
-            _ResetDefualtValues();
+            _ResetDefaultValues();
 
             if (_Mode == enMode.Update)
                 _LoadData();
@@ -221,7 +221,12 @@ namespace DVLD
 
             _Person.FirstName = txtFirstName.Text.Trim();
             _Person.SecondName = txtSecondName.Text.Trim();
-            _Person.ThirdName = txtThirdName.Text.Trim();
+
+            if (txtThirdName.Text.StartsWith("e.g."))
+                { _Person.ThirdName = ""; }
+            else
+            { _Person.ThirdName = txtThirdName.Text.Trim(); }
+           
             _Person.LastName = txtLastName.Text.Trim();
             _Person.NationalNo = txtNationalNo.Text.Trim();
             _Person.Email = txtEmail.Text.Trim();
