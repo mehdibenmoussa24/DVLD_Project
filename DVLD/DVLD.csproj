@@ -51,10 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmUserInfo.cs">
+    <Compile Include="frmListUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUserInfo.Designer.cs">
+    <Compile Include="frmListUsers.Designer.cs">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserInfo.Designer.cs">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="User\Controls\ctrlUserCard.cs">
@@ -116,7 +122,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Global Classes\Util.cs" />
     <Compile Include="Global Classes\Validation.cs" />
-    <EmbeddedResource Include="frmUserInfo.resx">
+    <EmbeddedResource Include="frmListUsers.resx">
+      <DependentUpon>frmListUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\Controls\ctrlUserCard.resx">
@@ -282,6 +291,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UserInformation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
