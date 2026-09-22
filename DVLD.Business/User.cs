@@ -24,7 +24,7 @@ namespace DVLD.Business
 
         public User()
         {
-            ID = -1;
+            UserID = -1;
             PersonID = -1;
             PersonInfo = new Person();
             UserName = string.Empty;
@@ -35,7 +35,7 @@ namespace DVLD.Business
 
         public User(int userID, int personID, string userName, string password, bool isActive)
         {
-            ID = userID;
+            UserID = userID;
             PersonID = personID;
             PersonInfo = Person.Find(personID);
             UserName = userName;
