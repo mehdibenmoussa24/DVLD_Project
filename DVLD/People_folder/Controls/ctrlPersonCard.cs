@@ -48,7 +48,8 @@ namespace DVLD
         private void _FillPersonInfo()
         {
             lblPersonID.Text = _Person.PersonID.ToString();
-            lblName.Text = _Person.FullName.ToString();
+            _PersonID = _Person.PersonID;
+           lblName.Text = _Person.FullName.ToString();
             lblNationalNo.Text = _Person.NationalNo.ToString();
             lblGender.Text = _Person.Gender == 0 ? "Male" : "Female";
             lblEmail.Text = _Person.Email.ToString();
@@ -85,6 +86,7 @@ namespace DVLD
             }
            
                 _FillPersonInfo();
+           
  
         }
 

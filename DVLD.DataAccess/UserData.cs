@@ -357,7 +357,7 @@ namespace DVLD.DataAccess
                         {
                             isFound = reader.HasRows;
                         }
-                            return true;
+                            return isFound;
                     }
                     catch (Exception ex)
                     {
@@ -365,7 +365,7 @@ namespace DVLD.DataAccess
                     }
                 }
             }
-            return false;
+            return isFound;
         }
         public static bool ChangePassword(int userID, string newPassword)
         {
