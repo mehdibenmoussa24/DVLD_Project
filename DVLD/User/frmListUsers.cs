@@ -150,7 +150,9 @@ namespace DVLD
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Comming Soon..","Soon",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            frmAddUpdateUser Frm1 = new frmAddUpdateUser();
+            Frm1.ShowDialog();
+            frmListUsers_Load(null, null);
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -185,6 +187,20 @@ namespace DVLD
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This Feature Is Not Implemented Yet!", "Not Ready!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser Frm1 = new frmAddUpdateUser();
+            Frm1.ShowDialog();
+            frmListUsers_Load(null, null);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateUser Frm1 = new frmAddUpdateUser((int)dgvUsers.CurrentRow.Cells[0].Value);
+            Frm1.ShowDialog();
+            frmListUsers_Load(null, null);
         }
     }
 }
