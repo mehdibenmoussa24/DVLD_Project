@@ -116,6 +116,7 @@
     <EmbeddedResource Include="frmListApplicationTypes.resx">
       <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="People_folder\frmListPeople.resx">
       <DependentUpon>frmListPeople.cs</DependentUpon>
     </EmbeddedResource>
